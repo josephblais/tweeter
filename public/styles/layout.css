@@ -27,5 +27,9 @@ body {
 
 
  main {
-   
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto 5% auto 5%;
  }
