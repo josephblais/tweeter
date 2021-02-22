@@ -11,7 +11,7 @@ nav {
   display: flex;
   height: 120px;
   background-color: #4056a1;
-  color: #FFF;
+  color: #f4f1ec;
   /* VVV CHECK THIS OUT ONCE YOU ADD MORE NAV ELEMENTS VVV  */
   align-items: flex-end;
   padding: 1.5em;
