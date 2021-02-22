@@ -1,0 +1,22 @@
+/* 
+    Be 120 pixels in height
+    Be the full width of the viewport.
+    Have #4056A1 as its default background colour.
+    Have #FFFFF as its default font colour
+    The <span> within the <nav> has Bungee as it's default font-family
+    The inner content should not be touching the viewport edge on any side and should remain 1.5ems away from all edges
+ */
+
+nav {
+  display: flex;
+  height: 120px;
+  background-color: #4056a1;
+  color: #FFF;
+  /* VVV CHECK THIS OUT ONCE YOU ADD MORE NAV ELEMENTS VVV  */
+  align-items: flex-end;
+  padding: 1.5em;
+}
+
+nav span {
+  font-family: Bungee, sans-serif;
+}
