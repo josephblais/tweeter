@@ -12,7 +12,9 @@ $(document).ready(function() {
     counter.text(counterNumber);
 
     if (counterNumber < 0) {
-      counter.css({"color": "red"});
+      counter.addClass("red");
+    } else {
+      counter.removeClass("red");
     }
   });
 
