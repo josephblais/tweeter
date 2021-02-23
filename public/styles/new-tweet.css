@@ -2,8 +2,10 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
 }
 
+/* There's probably a better way to get this to span then just setting width 100% */
 .new-tweet h2{
   width: 100%;
   text-align: center;
@@ -17,6 +19,8 @@
   border-color: #545149;
   outline: none;
   resize: none;
+  /* remove scroll bars in Internet Explorer */
+  overflow: auto; 
 }
 
 .new-tweet button {
