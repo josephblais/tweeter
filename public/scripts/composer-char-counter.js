@@ -10,5 +10,10 @@ $(document).ready(function() {
     let counter = $(this).closest("form").find(".counter");
     // update counter output to counterNumber
     counter.text(counterNumber);
+
+    if (counterNumber < 0) {
+      counter.css({"color": "red"});
+    }
   });
+
 });
