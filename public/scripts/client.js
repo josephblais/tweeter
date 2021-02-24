@@ -82,10 +82,11 @@ $(document).ready(function() {
 $('#tweet-form').on('submit', function(event) {
   // Prevent default behaviour (i.e. redirect)
   event.preventDefault();
-  console.log('Submit Tweet');
 
   // Serialize the tweet content to submit to database
-  console.log($(this).serialize());
+  const tweet = $(this).serialize();
+  // post the tweet to server
+  $.post('/tweets/', tweet);
 
 });
 
