@@ -3,6 +3,7 @@
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
+  font-weight: 700;
 }
 
 /* There's probably a better way to get this to span then just setting width 100% */

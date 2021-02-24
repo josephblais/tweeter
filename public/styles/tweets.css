@@ -1,0 +1,19 @@
+.tweet {
+  border: #545149 3px solid;
+  width: 100%;
+  margin-top: 2em;
+  /* just so I can see what I'm doing */
+  margin-bottom: 10em;
+}
+
+.tweet header {
+  display: flex;
+  background-color: none;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* In a perfect world I'd have the right sized icons. Also the right colour! If I have time I'll Photoshop that. In the meantime, this will have to do */
+.tweet img {
+  max-width: 15px;
+}

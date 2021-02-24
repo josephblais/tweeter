@@ -1,4 +1,4 @@
-header {
+#main-header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,5 +7,5 @@ header {
   width: 100%;
   background-color: #FE9000;
   background-image: url("https://www.transparenttextures.com/patterns/light-paper-fibers.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  /* FROM TRANSPARENTTEXTURES.COM: This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
