@@ -89,15 +89,18 @@ $(document).ready(function() {
     const tweet = $(this).serialize();
     // post the tweet to server
     $.post('/tweets/', tweet)
-      .success(function(result) {
+      .done(function(result) {
         console.log('successfully posted to server');
       })
-      .error((err) => console.log(err.message));
+      .fail((err) => console.log(err.message));
 
     // Clear tweet form on submit
     $('#tweet-form').children("#tweet-text").val("");
   });
 
+  // fetches tweets from the server
+  const loadTweets = () => {
 
+  }
 
 });
