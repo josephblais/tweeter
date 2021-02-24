@@ -8,12 +8,25 @@
 
 .tweet header {
   display: flex;
-  background-color: none;
   justify-content: space-between;
   width: 100%;
+  margin: 5px;
 }
 
-/* In a perfect world I'd have the right sized icons. Also the right colour! If I have time I'll Photoshop that. In the meantime, this will have to do */
-.tweet img {
-  max-width: 15px;
+.tweet-content {
+  border-bottom: solid 3px;
+  border-color: #545149;
+  margin: 5px;
+}
+
+.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  font-size: x-small;
+}
+
+/* In a perfect world I'd have the right colour! Same as the header and the TWEET button  */
+.tweet footer .icons {
+
 }
