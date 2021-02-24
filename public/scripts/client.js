@@ -54,18 +54,27 @@ $(document).ready(function() {
   $('#tweet-form').on('submit', function(event) {
   // Prevent default behaviour (i.e. redirect)
     event.preventDefault();
+    // Get the tweet string
+    let tweetText = $('#tweet-form').children("#tweet-text").val();
 
-    // Serialize the tweet content to submit to database
-    const tweet = $(this).serialize();
-    // post the tweet to server
-    $.post('/tweets/', tweet)
-      .done(function(result) {
-        console.log('successfully posted to server');
-      })
-      .fail((err) => console.log(err.message));
+    // Send alerts if tweet is empty or too long
+    if (!tweetText) {
+      alert('Empty Tweet! Add some text!');
+    } else if (tweetText.length > 140) {
+      alert('That Tweet is too long! 140 characters max!');
+    } else {
+      // Serialize the tweet content to submit to database
+      const tweet = $(this).serialize();
+      // post the tweet to server
+      $.post('/tweets/', tweet)
+        .done(function(result) {
+          console.log('successfully posted to server');
+        })
+        .fail((err) => console.log(err.message));
 
-    // Clear tweet form on submit
-    $('#tweet-form').children("#tweet-text").val("");
+      // Clear tweet form on submit
+      $('#tweet-form').children("#tweet-text").val("");
+    }
   });
 
   // fetches tweets from the server
