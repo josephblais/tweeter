@@ -100,7 +100,13 @@ $(document).ready(function() {
 
   // fetches tweets from the server
   const loadTweets = () => {
+    $.get('/tweets/')
+      .done(function(result) {
+        renderTweets(result);
+      })
+      .fail((err) => console.log(err.message));
+  };
 
-  }
+  loadTweets();
 
 });
