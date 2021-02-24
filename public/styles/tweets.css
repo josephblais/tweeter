@@ -1,16 +1,29 @@
 .tweet {
   border: #545149 3px solid;
-  width: 100%;
   margin-top: 2em;
   /* just so I can see what I'm doing */
   margin-bottom: 10em;
 }
 
+.tweet:hover {
+  box-shadow:10px 10px #5572cf;
+}
+
 .tweet header {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  margin: 5px;
+  align-items: baseline;
+  margin: 10px;
+}
+
+.tweet .username {
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.tweet .user-handle {
+  color: rgba(201, 201, 201, 0.911);
 }
 
 .tweet-content {
