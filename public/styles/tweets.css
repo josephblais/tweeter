@@ -6,7 +6,8 @@
 }
 
 .tweet:hover {
-  box-shadow:10px 10px #5572cf;
+  box-shadow:10px 10px #aebae0;
+  /* Should something else happen here? */
 }
 
 .tweet header {
@@ -23,7 +24,8 @@
 }
 
 .tweet .user-handle {
-  color: rgba(201, 201, 201, 0.911);
+  /* same color as the .tweet:hover box-shadow */
+  color: #aebae0;
 }
 
 .tweet-content {
@@ -37,9 +39,4 @@
   justify-content: space-between;
   margin: 5px;
   font-size: x-small;
-}
-
-/* In a perfect world I'd have the right colour! Same as the header and the TWEET button  */
-.tweet footer .icons {
-
 }
