@@ -31,7 +31,7 @@ $(document).ready(function() {
       },
       "created_at": 1461113959088
     }
-  ]
+  ];
 
 
   const renderTweets = (tweets) => {
@@ -72,7 +72,7 @@ $(document).ready(function() {
       </div>
     </footer>
   </article>`;
-  return $tweet;
+    return $tweet;
   };
   
   
@@ -80,23 +80,23 @@ $(document).ready(function() {
   
 
 
-// Posts user-submitted tweet to server
-$('#tweet-form').on('submit', function(event) {
+  // Posts user-submitted tweet to server
+  $('#tweet-form').on('submit', function(event) {
   // Prevent default behaviour (i.e. redirect)
-  event.preventDefault();
+    event.preventDefault();
 
-  // Serialize the tweet content to submit to database
-  const tweet = $(this).serialize();
-  // post the tweet to server
-  $.post('/tweets/', tweet)
-    .success(function(result) {
-      console.log('successfully posted to server');
-    })
-    .error((err) => console.log(err.message));
+    // Serialize the tweet content to submit to database
+    const tweet = $(this).serialize();
+    // post the tweet to server
+    $.post('/tweets/', tweet)
+      .success(function(result) {
+        console.log('successfully posted to server');
+      })
+      .error((err) => console.log(err.message));
 
-  // Clear tweet form on submit
-  $('#tweet-form').children("#tweet-text").val("");
-});
+    // Clear tweet form on submit
+    $('#tweet-form').children("#tweet-text").val("");
+  });
 
 
 
