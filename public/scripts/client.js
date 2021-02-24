@@ -45,6 +45,7 @@ $(document).ready(function() {
   };
 
   const createTweetElement = (tweetData) => {
+    let now = moment();
     let $tweet = `<article class="tweet">
     <header>
       <div class="username-and-image">
@@ -62,7 +63,7 @@ $(document).ready(function() {
     </div>
     <footer>
       <!-- Time posted -->
-      <span>${Date(tweetData.created_at)}</span>
+      <span>${moment(tweetData.created_at).fromNow()}</span>
       <!-- logos for flag, retweet, like -->
         <div class="icons">
         <img src="docs/flags.png">
@@ -74,11 +75,12 @@ $(document).ready(function() {
   return $tweet;
   };
   
+  
   renderTweets(data);
   
 
 
-
+// Posts user-submitted tweet to server
 $('#tweet-form').on('submit', function(event) {
   // Prevent default behaviour (i.e. redirect)
   event.preventDefault();
@@ -86,9 +88,16 @@ $('#tweet-form').on('submit', function(event) {
   // Serialize the tweet content to submit to database
   const tweet = $(this).serialize();
   // post the tweet to server
-  $.post('/tweets/', tweet);
+  $.post('/tweets/', tweet)
+    .success(function(result) {
+      console.log('successfully posted to server');
+    })
+    .error((err) => console.log(err.message));
 
+  // Clear tweet form on submit
   $('#tweet-form').children("#tweet-text").val("");
 });
+
+
 
 });
