@@ -3,9 +3,10 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// const moment = require('moment');
 
 $(document).ready(function() {
+  // const moment = require('moment');
+
   // Test / driver code (temporary). Eventually will get this from the server.
   const data = [
     {
@@ -31,6 +32,8 @@ $(document).ready(function() {
       "created_at": 1461113959088
     }
   ]
+
+
   const renderTweets = (tweets) => {
     //loop through tweets
     for (let tweet of tweets) {
@@ -59,7 +62,7 @@ $(document).ready(function() {
     </div>
     <footer>
       <!-- Time posted -->
-      <span>moment(tweetData.created_at).fromNow()</span>
+      <span>${Date(tweetData.created_at)}</span>
       <!-- logos for flag, retweet, like -->
         <div class="icons">
         <img src="docs/flags.png">
@@ -70,7 +73,20 @@ $(document).ready(function() {
   </article>`;
   return $tweet;
   };
-
+  
   renderTweets(data);
   
+
+
+
+$('#tweet-form').on('submit', function(event) {
+  // Prevent default behaviour (i.e. redirect)
+  event.preventDefault();
+  console.log('Submit Tweet');
+
+  // Serialize the tweet content to submit to database
+  console.log($(this).serialize());
+
+});
+
 });

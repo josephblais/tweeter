@@ -24,7 +24,6 @@
 /* Aligns elements vertically with user-handle */
 .tweet .username-and-image {
   display: flex;
-  justify-content: center;
   align-items: center;
  
 }
