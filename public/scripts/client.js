@@ -47,10 +47,7 @@ $(document).ready(function() {
   </article>`;
     return $tweet;
   };
-  
-  
-  renderTweets(data);
-  
+    
 
 
   // Posts user-submitted tweet to server
