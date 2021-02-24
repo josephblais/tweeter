@@ -88,6 +88,7 @@ $('#tweet-form').on('submit', function(event) {
   // post the tweet to server
   $.post('/tweets/', tweet);
 
+  $('#tweet-form').children("#tweet-text").val("");
 });
 
 });
