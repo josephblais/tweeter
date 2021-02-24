@@ -1,8 +1,6 @@
 .tweet {
   border: #545149 3px solid;
-  margin-top: 2em;
-  /* just so I can see what I'm doing */
-  margin-bottom: 10em;
+  margin-top: 50px;
 }
 
 .tweet:hover {
@@ -13,19 +11,35 @@
 .tweet header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   margin: 10px;
 }
 
-.tweet .username {
+/* In a real setting I'd have some code that resizes all user images to a constant size */
+.tweet header .img {
+  max-width: 50px ;
+  max-height: 50px;
+}
+
+/* Aligns elements vertically with user-handle */
+.tweet .username-and-image {
   display: flex;
   justify-content: center;
+  align-items: center;
  
 }
 
 .tweet .user-handle {
   /* same color as the .tweet:hover box-shadow */
   color: #aebae0;
+  /* hidden by default */
+  display: none;
+}
+
+/* Show on hover */
+.tweet:hover .user-handle {
+  display: block;
+ 
 }
 
 .tweet-content {
