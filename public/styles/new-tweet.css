@@ -46,6 +46,7 @@
   text-align: center;
   color: red;
   margin-bottom: 50px;
+  display: none;
 }
 
 #error #exclaim-left {

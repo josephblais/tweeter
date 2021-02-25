@@ -54,7 +54,6 @@ $(document).ready(function() {
   };
     
 
-
   // Posts user-submitted tweet to server
   $('#tweet-form').on('submit', function(event) {
   // Prevent default behaviour (i.e. redirect)
@@ -62,14 +61,14 @@ $(document).ready(function() {
     // Get the tweet string
     let tweetText = $(this).children("#tweet-text").val();
 
-    let errorText = $(this).parent().children("#error-text").val();
-
     // Send alerts if tweet is empty or too long
     if (!tweetText) {
-  
-      $('#error-text').append('Empty Tweet! Add some text');
+      $('#error-text').text('Empty Tweet! Add some text');
+      // Slide the error message into view
+      $('#error').slideDown();
     } else if (tweetText.length > 140) {
-      $('#error-text').append('That Tweet is too long! 140 characters max');
+      $('#error-text').text('That Tweet is too long! 140 characters max');
+      $('#error').slideDown();
     } else {
       // Serialize the tweet content to submit to database
       const tweet = $(this).serialize();
@@ -86,6 +85,12 @@ $(document).ready(function() {
       $('#tweets-container').empty();
       // Load all the tweets (including the new one) from database
       loadTweets();
+
+      // reset counter
+      $('.counter').html('140');
+
+      // hide validation error message if showing
+      $('#error').slideUp();
     }
   });
 
