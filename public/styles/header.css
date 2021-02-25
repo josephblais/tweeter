@@ -4,9 +4,8 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
-  /* Bypasses the fixed navbar
-  margin-top: 120px; */
-  padding-top: 25px;
+  /* Bring profile picture under the navbar text */
+  padding-top: 100px;
   margin-bottom: 50px;
   background-color: #FE9000;
   background-image: url("https://www.transparenttextures.com/patterns/light-paper-fibers.png");
@@ -17,11 +16,8 @@
 
 @media (min-width: 768px) {
   #main-header {
-    /* margin-top: 0px; */
     margin-left: 5%;
     height: max-content;
-    /* width: 100%; */
-    /* position: fixed; */
     width
   }
 }

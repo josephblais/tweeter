@@ -6,8 +6,6 @@
 
 $(document).ready(function() {
   // Render tweets from database on page
-  
-
   loadTweets();
 
   // Posts user-submitted tweet to server
@@ -16,7 +14,7 @@ $(document).ready(function() {
     event.preventDefault();
     // Get the tweet string
     let tweetText = $(this).children("#tweet-text").val();
-    
+
     // Send alerts if tweet is empty or too long
     if (!tweetText) {
       errorDisplay('Empty Tweet! Add some text');
@@ -44,6 +42,17 @@ $(document).ready(function() {
 
       // hide validation error message if showing
       $('#error').slideUp();
+    }
+  });
+
+  // hide the nav on scroll down in small viewports
+  $(window).scroll(function() {
+    if ($(window).width() < 768) {
+      if ($(this).scrollTop() > 300) {
+        $('nav').fadeOut();
+      } else {
+        $('nav').show();
+      }
     }
   });
 
