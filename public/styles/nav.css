@@ -10,7 +10,7 @@
 nav {
   display: flex;
   align-items: flex-end;
-  /* The next three properties fix the navbar at the top of the window */
+  /* The next three properties help fix the navbar at the top of the window */
   position: fixed;
   top: 0;
   width: 100%;

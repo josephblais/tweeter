@@ -1,7 +1,4 @@
 .new-tweet {
-  /* display: flex; */
-  /* justify-content: center; */
-  /* flex-wrap: wrap; */
   width: 100%;
   font-weight: 700;
 }
@@ -49,6 +46,7 @@
   display: none;
 }
 
+/* Drop-shadow for the default ! in the #error div */
 #error #exclaim-left {
   text-shadow: -2px 2px #aebae0;
 }
