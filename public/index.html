@@ -52,6 +52,12 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div id="error">
+          <!-- Validation errors will appear here -->
+          <span id="exclaim-left">!</span>
+          <span>This is a placeholder alert</span>
+          <span id="exclaim-right">!</span>
+        </div>
         <!-- This H2 was in the code provided on Compass but isn't in any of the examples… -->
         <!-- <h2>Compose Tweet</h2> -->
         <form method="POST" id="tweet-form" action="/tweets/">

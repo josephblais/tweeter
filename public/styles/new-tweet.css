@@ -17,8 +17,7 @@
   width: 100%;
   background-color: inherit;
   border: none;
-  border-bottom: solid 3px;
-  border-color: #545149;
+  border-bottom: solid 3px #545149;
   outline: none;
   resize: none;
   /* remove scroll bars in Internet Explorer */
@@ -40,4 +39,19 @@
 
 .red {
   color: red;
+}
+
+#error {
+  border: solid 3px red;
+  text-align: center;
+  color: red;
+  margin-bottom: 50px;
+}
+
+#error #exclaim-left {
+  text-shadow: -2px 2px #aebae0;
+}
+
+#error #exclaim-right {
+  text-shadow: 2px 2px #aebae0;
 }

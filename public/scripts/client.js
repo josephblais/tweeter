@@ -5,8 +5,7 @@
  */
 
 $(document).ready(function() {
-  // const moment = require('moment');
-
+  // Render tweets from database on page
   const renderTweets = (tweets) => {
     //loop through tweets
     for (let tweet of tweets) {
