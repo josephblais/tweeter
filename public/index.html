@@ -39,6 +39,9 @@
       <span>tweeter</span>
     </nav>
 
+    
+    <!-- Page-specific (main) content here -->
+    <main class="container">
     <!-- Header: displays avatar and name of logged-in user -->
     <header id="main-header">
       <div>
@@ -49,31 +52,29 @@
           <h2><strong>Your</strong> Name</h2>
       </div>
   </header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <div id="error">
-          <!-- Validation errors will appear here -->
-          <span id="exclaim-left">!</span>
-          <span id="error-text"></span>
-          <span id="exclaim-right">!</span>
-        </div>
-        <!-- This H2 was in the code provided on Compass but isn't in any of the examples… -->
-        <!-- <h2>Compose Tweet</h2> -->
-        <form method="POST" id="tweet-form" action="/tweets/">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class="new-tweet-footer">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+      <div class="tweets-content">
+        <section class="new-tweet">
+          <div id="error">
+            <!-- Validation errors will appear here -->
+            <span id="exclaim-left">!</span>
+            <span id="error-text"></span>
+            <span id="exclaim-right">!</span>
           </div>
-        </form>
-      </section>
-      <section id="tweets-container">
-        <!-- Tweets will be added here -->
-      </section>
-      
+          <!-- This H2 was in the code provided on Compass but isn't in any of the examples… -->
+          <!-- <h2>Compose Tweet</h2> -->
+          <form method="POST" id="tweet-form" action="/tweets/">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="new-tweet-footer">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <section id="tweets-container">
+          <!-- Tweets will be added here -->
+        </section>
+      </div>
     </main>
   </body>
   <!-- Attribution is important! I got the icons from here: -->

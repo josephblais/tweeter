@@ -3,10 +3,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 400px;
   width: 100%;
-  /* Bypasses the fixed navbar */
-  margin-top: 120px;
+  /* Bypasses the fixed navbar
+  margin-top: 120px; */
   padding-top: 25px;
   margin-bottom: 50px;
   background-color: #FE9000;
@@ -16,11 +15,13 @@
 }
 
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   #main-header {
-    margin-top: 0px;
-    padding-top: 120px;
-    height: auto;
-    position: fixed;
+    /* margin-top: 0px; */
+    margin-left: 5%;
+    height: max-content;
+    /* width: 100%; */
+    /* position: fixed; */
+    width
   }
 }
