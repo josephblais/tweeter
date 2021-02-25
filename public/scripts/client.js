@@ -17,6 +17,13 @@ $(document).ready(function() {
     }
   };
 
+  // Reencodes potentially unsafe text in tweets to prevent XSS
+  const escapeTweetText = (tweetText) => {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(tweetText));
+    return div.innerHTML;
+  };
+
   const createTweetElement = (tweetData) => {
     let $tweet = `<article class="tweet">
     <header>
@@ -31,7 +38,7 @@ $(document).ready(function() {
       </div>
     </header>
     <div class="tweet-content">
-      <p>${tweetData.content.text}</p>
+      <p>${escapeTweetText(tweetData.content.text)}</p>
     </div>
     <footer>
       <!-- Time posted -->
