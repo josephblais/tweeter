@@ -59,6 +59,7 @@ $(document).ready(function() {
   $('.form-toggle').click(function() {
     if ($('#tweet-form').first().is(":hidden")) {
       $('#tweet-form').slideDown();
+      $('#tweet-text').focus();
     } else {
       $('#tweet-form').slideUp();
     }
