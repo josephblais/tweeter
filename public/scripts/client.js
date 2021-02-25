@@ -13,12 +13,11 @@ $(document).ready(function() {
       // calls createTweetElement for each tweet
       const $tweet = createTweetElement(tweet);
       // takes return value and appends it to the tweets container
-      $('#tweets-container').append($tweet);
+      $('#tweets-container').prepend($tweet);
     }
   };
 
   const createTweetElement = (tweetData) => {
-    let now = moment();
     let $tweet = `<article class="tweet">
     <header>
       <div class="username-and-image">
