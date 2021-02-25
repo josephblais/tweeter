@@ -26,22 +26,19 @@ $(document).ready(function() {
       // post the tweet to server
       $.post('/tweets/', tweet)
         .done(function(result) {
-          console.log('successfully posted to server');
+          // Clear tweet form on submit
+          $('#tweet-form').children("#tweet-text").val("");
+          // Clear tweets-container
+          $('#tweets-container').empty();
+          // Load all the tweets (including the new one) from database
+          loadTweets();
+          // reset counter
+          $('.counter').html('140');
+          // hide validation error message if showing
+          $('#error').slideUp();
         })
         .fail((err) => console.log(err.message));
 
-      // Clear tweet form on submit
-      $('#tweet-form').children("#tweet-text").val("");
-      // Clear tweets-container
-      $('#tweets-container').empty();
-      // Load all the tweets (including the new one) from database
-      loadTweets();
-
-      // reset counter
-      $('.counter').html('140');
-
-      // hide validation error message if showing
-      $('#error').slideUp();
     }
   });
 
