@@ -60,13 +60,16 @@ $(document).ready(function() {
   // Prevent default behaviour (i.e. redirect)
     event.preventDefault();
     // Get the tweet string
-    let tweetText = $('#tweet-form').children("#tweet-text").val();
+    let tweetText = $(this).children("#tweet-text").val();
+
+    let errorText = $(this).parent().children("#error-text").val();
 
     // Send alerts if tweet is empty or too long
     if (!tweetText) {
-      alert('Empty Tweet! Add some text!');
+  
+      $('#error-text').append('Empty Tweet! Add some text');
     } else if (tweetText.length > 140) {
-      alert('That Tweet is too long! 140 characters max!');
+      $('#error-text').append('That Tweet is too long! 140 characters max');
     } else {
       // Serialize the tweet content to submit to database
       const tweet = $(this).serialize();
