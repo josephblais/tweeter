@@ -1,6 +1,7 @@
 nav {
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
   /* The next three properties help fix the navbar at the top of the window */
   position: fixed;
   top: 0;
@@ -10,8 +11,22 @@ nav {
   color: #f4f1ec;
   /* VVV CHECK THIS OUT ONCE YOU ADD MORE NAV ELEMENTS VVV  */
   padding: 1.5em;
+}
+
+nav .logo {
   font-family: Bungee, sans-serif;
 }
+
+/* Bounces the form-toggle call to action */
+@keyframes bounce {
+   0% { transform: translateY(0); }
+   100% { transform: translateY(-5px); } 
+  }
+
+  .form-toggle { 
+    cursor: pointer;
+    animation: 0.8s infinite alternate bounce; 
+  }
 
 @media (max-width: 768px) {
   nav {
