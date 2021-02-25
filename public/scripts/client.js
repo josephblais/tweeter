@@ -95,9 +95,9 @@ const createTweetElement = (tweetData) => {
     <span>${moment(tweetData.created_at).fromNow()}</span>
     <!-- logos for flag, retweet, like -->
       <div class="icons">
-      <img src="docs/flags.png">
-      <img src="docs/retweet.png">
-      <img src="docs/like.png">
+      <img src="images/flags.png">
+      <img src="images/retweet.png">
+      <img src="images/like.png">
     </div>
   </footer>
 </article>`;
@@ -125,6 +125,6 @@ const renderTweets = (tweets) => {
 
 const errorDisplay = (text) => {
   $('#error-text').text(text);
-  // Slide the error message into view
+  // Slide the error message into view - it slides up when the user submits a valid tweet
   $('#error').slideDown();
 };
