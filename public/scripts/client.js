@@ -74,6 +74,10 @@ $(document).ready(function() {
 
       // Clear tweet form on submit
       $('#tweet-form').children("#tweet-text").val("");
+      // Clear tweets-container
+      $('#tweets-container').empty();
+      // Load all the tweets (including the new one) from database
+      loadTweets();
     }
   });
 
