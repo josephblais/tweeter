@@ -42,7 +42,7 @@ $(document).ready(function() {
     }
   });
 
-  // hide the nav on scroll down in small viewports
+  // hide the nav on scroll down near the bottom of the header section in small viewports
   $(window).scroll(function() {
     if ($(window).width() < 768) {
       if ($(this).scrollTop() > 300) {

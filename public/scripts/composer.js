@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+  // handle new-tweet counter
   $('#tweet-text').on('input', function() {
     // Get length of text in text-area
     let value = $(this).val();
@@ -15,6 +17,17 @@ $(document).ready(function() {
       counter.addClass("red");
     } else {
       counter.removeClass("red");
+    }
+  });
+
+  // handle up-toggle icon
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('#up-toggle').fadeIn(400);
+      $('.bounce').fadeOut(400);
+    } else {
+      $('.bounce').fadeIn(400);
+      $('#up-toggle').fadeOut(400);
     }
   });
 
