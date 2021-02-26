@@ -50,6 +50,6 @@ $(document).ready(function() {
 
 // Show/hide #tweet-form and move focus to tweet input
 const showTweetForm = () => {
-    $('#tweet-form').slideDown();
-    $('#tweet-text').focus();
+  $('#tweet-form').slideDown();
+  $('#tweet-text').focus();
 };
