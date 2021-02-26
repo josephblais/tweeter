@@ -20,7 +20,9 @@ $(document).ready(function() {
     }
   });
 
-  // handle up-toggle icon
+  // Next three functions handle up-toggle icon & form-toggle (both move focus to tweet-text on click)
+
+  // Bottom arrow appears, top arrow disappears once the page is scrolled more than 100px
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('#up-toggle').fadeIn(400);
@@ -31,4 +33,22 @@ $(document).ready(function() {
     }
   });
 
+  $('.form-toggle').click(function() {
+    showHideTweetForm();
+  });
+
+  $('#up-toggle').click(function() {
+    showHideTweetForm();
+  });
+
 });
+
+// Show/hide #tweet-form and move focus to tweet input
+const showHideTweetForm = () => {
+  if ($('#tweet-form').first().is(":hidden")) {
+    $('#tweet-form').slideDown();
+    $('#tweet-text').focus();
+  } else {
+    $('#tweet-form').slideUp();
+  }
+};
