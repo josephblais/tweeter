@@ -51,6 +51,8 @@ the tweets */
   bottom: 5%;
   right: 2.5%;
   opacity: 30%;
+  /* hidden on page load */
+  display: none;
 }
 
 #up-toggle:hover {
