@@ -42,3 +42,18 @@ body {
     margin-top: 170px;
   }
 }
+
+/* Keep the #up-toggle icon in the bottom right corner
+of the viewport, nicely centred on the right side of 
+the tweets */
+#up-toggle {
+  position: fixed;
+  bottom: 5%;
+  right: 2.5%;
+  opacity: 30%;
+}
+
+#up-toggle:hover {
+  cursor: pointer;
+  opacity: 100%;
+}
