@@ -31,6 +31,7 @@
   font-family: Bungee, sans-serif;
 }
 
+/* Toggles on .counter when character limit is reached */
 .red {
   color: red;
 }
@@ -43,7 +44,7 @@
   display: none;
 }
 
-/* Drop-shadow for the default ! in the #error div */
+/* Drop-shadow for the default '!' in the #error div */
 #error #exclaim-left {
   text-shadow: -2px 2px #aebae0;
 }

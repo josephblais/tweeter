@@ -32,6 +32,5 @@ nav .logo {
 @media (max-width: 768px) {
   nav {
     background: none;
-    z-index: 1;
   }
 }
