@@ -34,21 +34,22 @@ $(document).ready(function() {
   });
 
   $('.form-toggle').click(function() {
-    showHideTweetForm();
+    if ($('#tweet-form').first().is(":hidden")) {
+      showTweetForm();
+    } else {
+      $('#tweet-form').slideUp();
+    }
+    
   });
 
   $('#up-toggle').click(function() {
-    showHideTweetForm();
+    showTweetForm();
   });
 
 });
 
 // Show/hide #tweet-form and move focus to tweet input
-const showHideTweetForm = () => {
-  if ($('#tweet-form').first().is(":hidden")) {
+const showTweetForm = () => {
     $('#tweet-form').slideDown();
     $('#tweet-text').focus();
-  } else {
-    $('#tweet-form').slideUp();
-  }
 };

@@ -85,7 +85,7 @@ const createTweetElement = (tweetData) => {
   </div>
   <footer>
     <!-- Time posted -->
-    <span>${moment(tweetData.created_at).fromNow()}</span>
+    <span class ="time-posted">${moment(tweetData.created_at).fromNow()}</span>
     <!-- logos for flag, retweet, like -->
       <div class="icons">
       <img src="images/flags.png">

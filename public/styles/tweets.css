@@ -23,12 +23,21 @@
 .tweet .user-handle {
   /* same color as the .tweet:hover box-shadow */
   color: #aebae0;
-  /* hidden by default */
-  display: none;
+ 
+}
+
+/* Prevents tweet div from resizing when .icons appear on :hover */
+.tweet .time-posted {
+  margin-bottom: 10px;
+}
+
+.tweet .icons {
+   /* hidden by default */
+   display: none;
 }
 
 /* Show on hover */
-.tweet:hover .user-handle {
+.tweet:hover .icons {
   display: block;
  
 }
