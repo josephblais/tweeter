@@ -13,7 +13,7 @@ $(document).ready(function() {
   // Prevent default behaviour (i.e. redirect)
     event.preventDefault();
     // Get the tweet string
-    let tweetText = $(this).children("#tweet-text").val();
+    let tweetText = $(this).children('#tweet-text').val();
 
     // Send alerts if tweet is empty or too long
     if (!tweetText) {
@@ -27,7 +27,7 @@ $(document).ready(function() {
       $.post('/tweets/', tweet)
         .done(function(result) {
           // Clear tweet form on submit
-          $('#tweet-form').children("#tweet-text").val("");
+          $('#tweet-form').children('#tweet-text').val('');
           // Clear tweets-container
           $('#tweets-container').empty();
           // Load all the tweets (including the new one) from database
