@@ -9,14 +9,14 @@ $(document).ready(function() {
     let counterNumber = 140;
     counterNumber -= tweetLength;
     // traverse up DOM tree to get the counter output
-    let counter = $(this).closest("form").find(".counter");
+    let counter = $(this).closest('form').find('.counter');
     // update counter output to counterNumber
     counter.text(counterNumber);
 
     if (counterNumber < 0) {
-      counter.addClass("red");
+      counter.addClass('red');
     } else {
-      counter.removeClass("red");
+      counter.removeClass('red');
     }
   });
 
@@ -34,7 +34,7 @@ $(document).ready(function() {
   });
 
   $('.form-toggle').click(function() {
-    if ($('#tweet-form').first().is(":hidden")) {
+    if ($('#tweet-form').first().is(':hidden')) {
       showTweetForm();
     } else {
       $('#tweet-form').slideUp();
